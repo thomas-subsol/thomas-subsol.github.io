@@ -193,7 +193,7 @@ footer p {
 
 }
 
-#competences:hover .cercle{
+#competences:hover .cercle {
     animation: 3s ease progress;
 }
 
