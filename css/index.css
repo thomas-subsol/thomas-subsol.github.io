@@ -190,7 +190,11 @@ footer p {
     fill: none;
     stroke-width: 2.8;
     stroke-linecap: round;
-    animation: 2s backwards progress;
+
+}
+
+#competences:hover .cercle{
+    animation: 3s ease progress;
 }
 
 .cercle-background {
