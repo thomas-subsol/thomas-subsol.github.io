@@ -1,0 +1,12 @@
+#test_escape {
+	color : red;
+}
+#compteur {
+	display: flex;
+	flex-direction: row;
+	background-color: red;
+}
+#time {
+	color: red;
+	font-size: 30px;
+}

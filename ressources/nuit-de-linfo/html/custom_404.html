@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="../css/404.css">
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+
+
+<figure>
+    <div class="sad-mac"></div>
+    <figcaption>
+        <span class="sr-text">Error 404: Not Found</span>
+        <span class="e"></span>
+        <span class="r"></span>
+        <span class="r"></span>
+        <span class="o"></span>
+        <span class="r"></span>
+        <span class="_4"></span>
+        <span class="_0"></span>
+        <span class="_4"></span>
+        <span class="n"></span>
+        <span class="o"></span>
+        <span class="t"></span>
+        <span class="f"></span>
+        <span class="o"></span>
+        <span class="u"></span>
+        <span class="n"></span>
+        <span class="d"></span>
+    </figcaption>
+</figure>
+
+<script>
+
+var myGamePiece;
+var myObstacle;
+var myObstacles = [];
+var myTemps;
+var mySpeed = 5;
+var tauxdApparition = 150;
+var myCafe;
+var myCafe = [];
+var compteur=0;
+var count=0;
+
+function startGame() {
+    myGameArea.start();
+    myGamePiece = new component(80, 120, "../images/etudiant_droitjd.png", 100, myGameArea.canvas.height-120, "image");
+    myObstacle = new component(40, 40, "../images/classeur.gif", 300, 120, "image");
+    myTemps = new component("30px", "Consolas", "black", 280, 40, "text");
+    myCafe = new component(40, 40, "../images/cafe.jpeg", 300, 120, "image");
+    myBackground = new component(700, 500, "../images/decor.png", 0, 0, "image");
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 700;
+        this.canvas.height = 500;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        window.addEventListener('keydown', function (e) {
+            myGameArea.key = e.keyCode;
+        })
+        window.addEventListener('keyup', function (e) {
+            myGameArea.key = false;
+        })
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop : function() {
+        clearInterval(this.interval);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
+    this.gamearea = myGameArea;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;    
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (type == "image") {
+            ctx.drawImage(this.image, 
+                this.x, 
+                this.y,
+                this.width, this.height);
+        }
+        else if(this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } 
+        else{
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        if(myGamePiece.x>-3 && myGamePiece.x<670){
+            myGamePiece.x += this.speedX;
+        }
+        if(myGamePiece.x<=-3){
+            myGamePiece.x=669;
+        }
+        if(myGamePiece.x>=670){
+            myGamePiece.x=-2;
+        }        
+    }
+    this.crashWith = function(otherobj) {
+    var myleft = this.x;
+    var myright = this.x + (this.width);
+    var mytop = this.y;
+    var mybottom = this.y + (this.height);
+    var otherleft = otherobj.x;
+    var otherright = otherobj.x + (otherobj.width);
+    var othertop = otherobj.y;
+    var otherbottom = otherobj.y + (otherobj.height);
+    var crash = true;
+    if ((mybottom < othertop) ||
+    (mytop > otherbottom) ||
+    (myright < otherleft) ||
+    (myleft > otherright)) {
+      crash = false;
+    }
+    return crash;
+  }
+}
+
+function updateGameArea() {
+    var x, y;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            myGameArea.stop();
+            return;
+
+        } 
+    }
+    myGameArea.clear();
+    count=myGameArea.frameNo/500;
+    if(myGameArea.frameNo==1500){
+            myBackground.image.src="../images/decor_nuit.jpg";
+    }
+    myBackground.newPos();
+    myBackground.update();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(tauxdApparition)) {
+        x = Math.random()*myGameArea.canvas.width;
+        y = -20;
+        myObstacles.push(new component(60, 70, "../images/classeur.png", x, y, "image"));
+        if (tauxdApparition > 20) {
+        tauxdApparition = tauxdApparition - 2;
+        }
+    }
+    if (everyinterval(150) && mySpeed < 30) {
+        mySpeed += mySpeed * 0.05;
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].y += mySpeed * 0.5;
+        myObstacles[i].update();
+    }
+    /*if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = Math.random()*myGameArea.canvas.width;
+        y = -20;
+        myCafe.push(new component(60, 70, "../images/cafe.jpeg", x, y, "image"));
+    }
+    for (i = 0; i < myCafe.length; i += 1) {
+        myCafe[i].y +=1;
+        myCafe[i].update();
+    }*/
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;    
+    if (myGameArea.key && myGameArea.key == 37) {
+        compteur++;
+        myGamePiece.speedX = -mySpeed;
+        if(compteur%2==0){
+            myGamePiece.image.src = "../images/etudiant_gauchejg.png";
+        }
+        else{
+            myGamePiece.image.src = "../images/etudiant_gauchejd.png";
+        }
+    }
+    if (myGameArea.key && myGameArea.key == 39) {
+        compteur++;
+        myGamePiece.speedX = mySpeed; 
+        if(compteur%2==0){
+            myGamePiece.image.src = "../images/etudiant_droitjg.png";
+        }
+        else{
+            myGamePiece.image.src = "../images/etudiant_droitjd.png";
+        }
+    }
+
+    myTemps.text = "SCORE: " + myGameArea.frameNo;
+    myTemps.update();
+    myGamePiece.newPos();    
+    myGamePiece.update();
+}
+
+function everyinterval(n) {
+  if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+  return false;
+}
+</script>
+<footer>
+    <button onmousedown="location.reload()">Game Over</button>
+    <button onmousedown="startGame()">
+    <h3>Start the Game</h3>
+    <button><a href="./custom_hard.html">Mode Hardcore</a></button>
+</footer>
+</body>
+</html>

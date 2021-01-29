@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang=fr id="element">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style_general.css">
+    <title>StudentBot</title>
+</head>
+
+<header>
+    <div><a href="./custom_404.html">404</a></div>
+    <div><a href="./index.html">Accueil</a></div>
+    <div><a href="./etudiantprecaire.html">Escape</a></div>
+</header>
+
+<body>
+    <main class="IA" id="m">
+        <article>
+            <div class="studentbot">
+                <div><p id="chatbot">Bonjour, je suis StudentBot, votre assistant !</p></div>
+                <div><p id="chatbotask">STUDENTBOT : Avez-vous un problème ? <br></p></div>
+                <div><input id="saisie" type="text" onkeydown="if (event.keyCode == 13) {parler(); window.scrollBy(0, 150)}"></div>
+            </div>
+        </article>
+        <aside id="cote">
+            <button id="NB">Mode noir et blanc</button>
+            <button id="vis">Visibilité augmentée</button>
+            <p>Numéros utiles : </p>
+            <ul>
+                <li>Non au harcèlement :
+                    <a href="tel:3020" class="allo-telephone">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        3020
+                    </a>
+                </li>
+                <li>Suicide Écoute :
+                    <a href="tel:0145394000" class="allo-telephone">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        01 45 39 40 00
+                    </a>
+                </li>
+                <li>SOS Amitié :
+                    <a href="tel:0972394050" class="allo-telephone">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        09 72 39 40 50
+                    </a>
+                </li>
+            </ul>
+        </p>
+        <img id="jctriste" src="../images/jeancloudtriste.png" alt="Il est triste !">
+    </aside>
+</main>
+<script type="text/javascript" src="../javascript/chatbot.js"></script>
+<script type="text/javascript" src="../javascript/noirBlanc.js"></script>
+</body>
+</html>

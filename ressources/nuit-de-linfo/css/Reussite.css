@@ -1,0 +1,172 @@
+header{
+	background-color: white;
+	color: black;
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
+
+}
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header div{
+	margin: auto;
+}
+
+header a:link, header a:visited,header a:hover{
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+}
+
+main * {
+	color: white;
+}
+
+header div:hover, header div:hover a{
+	color: orange;
+	background-color: black;
+}
+
+div{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+body{
+	background-image:url(../images/bg.jpg);
+	background-attachment:fixed;
+	background-size: cover;
+	background-position: left;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	background-color: #838892;
+	line-height:150%;
+	margin: auto;
+	font-family:Avenir, sans-serif;
+}
+
+
+p {
+	font-size: 20px ;
+
+}
+
+img.stick {
+	height :800px;
+	margin : auto;
+	position : fixed ;
+	top: 100px ;
+	left: -100px ;
+	display:flex ;
+}
+
+img.fireworks.gif {
+	background-repeat:repeat;
+	size: cover;
+	width: 100%;
+	height :;
+	margin : auto;
+	top: 1000px ;
+	left: -100px ;
+	display:flex ;
+}
+
+title {
+	left: 100px ;
+}
+
+h1 {
+	font-weight:bold;
+	text-align: center; ;
+	font-size : 100px;
+}
+
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	width:100%;
+}
+
+maboite{
+	position: fixed;
+	padding: 60px 1920px 20px;
+	border:5px solid purple;
+	background-color:purple;
+	position : relative ;
+	top : 0px ;
+	left :0px ;
+	width:30%;
+	font-size : 60px;
+	background-image:url("../images/money.jpg");
+	background-image height: 1px ;
+	color : black;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+img.money {
+	height: 1px ;
+	size: 1px ;
+	width: 10%;
+}
+
+.header {
+	display: flex ;
+	flex-shrink: 1 ;
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+	background: #000000;
+	color: white;
+	font-size: 30px;
+
+}
+
+a1{
+	font-size:60px ;
+	color:Gold;
+	text-shadow:0 -1px 0 black;
+}
+a1:hover,a1:focus{
+	background:rgba(0,0,0,.4);
+	box-shadow:0 1px 0 rgba(255,255,255,.4);
+}
+a1 span{
+	position:absolute;
+	margin-top:23px;
+	margin-left:-35px;
+	color:#09c;
+	background:rgba(0,0,0,.9);
+	padding:15px;
+	border-radius:3px;
+	box-shadow:0 0 2px rgba(0,0,0,.5);
+	transform:scale(0) rotate(-12deg);
+	transition:all .25s;
+	opacity:0;
+}
+
+a1:hover span, a1:focus span{
+	transform:scale(1) rotate(0);
+	opacity:1;
+}
+main {
+	display: flex;
+	flex-direction: row;
+}

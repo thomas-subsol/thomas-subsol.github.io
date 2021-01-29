@@ -1,0 +1,41 @@
+/*CSS MAIN*/
+main {
+  position: absolute;
+  margin-top: 66px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 36px;
+}
+
+p {
+  padding: 8px;
+  text-align: justify;
+}
+
+img {
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.boite {
+  display: flex;
+  align-items: center;
+
+  margin: 66px 3%;
+  border: 1px solid $blanc;
+  border-radius: 4px;
+
+  background-color: white;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/*IMPORTATION DES COMPOSANTS*/
+@import "informations";
+@import "presentation";
+@import "competences";
+@import "projets";
+@import "contact";
+@import "footer";

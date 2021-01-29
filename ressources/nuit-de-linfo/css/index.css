@@ -1,0 +1,236 @@
+html{
+	background-color: #4A235A;
+	color: #B0E2FF;
+	font-family: "IA";
+}
+
+h1{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+h2,h3{
+	font-family: "Agency FB", "Arial";
+	font-size: 35;
+}
+
+h3{
+	margin-left:10%;
+}
+h2{
+	margin-left: 15%;
+}
+
+div{
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+}
+
+#imgCB{
+	height: 200px;
+	width: 200px;
+}
+
+#imgTchat{
+	height: 200px;
+	width: 200px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#imgLivre{
+	height: 200px;
+	width: 200px;
+}
+
+a:link,a:visited,a:hover{
+	text-align: center;
+	text-decoration: none;
+	color: #B0E2FF;
+}
+
+img{
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	transform: scale(1);
+	transition: all 0.5s;
+}
+img:hover{
+	transform: scale(1.1);
+	transition: all 1s;
+}
+
+#cheum{
+	padding-left:10px;
+	color: #33A1C9;
+	text-decoration: underline;
+	transform: rotate(-5deg);
+	animation: ease-out rotation 3s infinite;
+}
+
+#go_savage{
+	font-size: 40;
+	color: #ff0000;
+	animation: colored 3s infinite;
+}
+
+@keyframes rotation{
+	0% {transform: rotate(-5deg);}
+	50% {transform: rotate(5deg);}
+	100%{transform: rotate(-5deg);}
+}
+
+@keyframes colored{
+	0% {color: #ff0000;}
+	50% {color: #cc0000;}
+	100%{color: #ff0000;}
+}
+
+
+#bttc{
+	position: fixed;
+	top: 75%;
+	left: 85%;
+}
+
+#ll{
+	position: fixed;
+	top: 75%;
+	left: 2%;
+}
+
+
+/*;
+#box{
+display: flex;
+flex-direction: column;
+flex:1;
+}
+
+#un, #deux, #trois{
+display: flex;
+flex-direction: column;
+flex:1;
+background-color: orange;
+height: 100px;
+width: 100px;
+}
+
+#chatbot{
+float: right;
+text-align: center;
+display: inline-block;
+}
+
+#imgCB{
+height: 200px;
+width: 200px;
+}
+
+
+
+#livre{
+float: left;
+}
+
+#imgLivre{
+height: 200px;
+width: 200px;
+}
+
+#tchat{
+float: 50%;
+}
+
+#imgTchat{
+height: 200px;
+width: 200px;
+}*/
+
+@media(max-width:480px){ /*responsive pour téléphone*/
+	body{
+		width:100%;
+	}
+	div {
+		display: flex;
+		flex-direction: column;
+	}
+	a {
+		margin: 10px;
+	}
+}
+@font-face {
+	font-family: "IA";
+	src: url("IA.ttf");
+}
+
+/*accès à escape game */
+.button {
+	bottom: 100px ;
+	background-color: black;
+	border: none;
+	color: #D80A74;
+	padding: 30px 100px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	width: 100px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+.button:hover {
+	background-color: #00FF97 ; /* purple */
+	color: white;
+}
+.popup {
+	font-size: 20px;
+	top: 200px;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.popup .popuptext {
+	visibility: hidden;
+	width: 0px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -155px;
+}
+.popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+.popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s
+}
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+}
+<a {
+	color : red ;
+}

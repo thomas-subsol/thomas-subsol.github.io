@@ -1,0 +1,33 @@
+/*POLICES*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/*VARIABLES*/
+$rouge: #DB4437;
+$jaune: #F4B400;
+$vert: #0F9D58;
+$bleu: #4285F4;
+$noir: #212121;
+$blanc: #fafafa;
+$largeur-menu-reactif: 300px;
+
+/*CSS GENERAL*/
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $blanc;
+}
+
+/*IMPORTATION DES COMPOSANTS*/
+@import "header";
+@import "main";
+@import "responsive";

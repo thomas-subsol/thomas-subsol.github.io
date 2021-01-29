@@ -1,0 +1,51 @@
+a[href^="mailto"]::before{
+    content: "📧 ";
+}
+
+a[href^="tel"]::before{
+    content: "📞 ";
+}
+
+address{
+    margin: 10%;
+    font-style: normal;
+    height: 100%;
+}
+
+iframe{
+    height: 500px;
+    border: 5px solid white;
+}
+
+main a{
+    align-items: center;
+    width: auto;
+    margin-bottom: 1%;
+    font-style: italic;
+}
+
+main a:hover{
+    color: black;
+}
+
+.contactpresse{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    word-break: break-word;
+    margin: 1% 1%;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.articleimg{
+    margin: 1%;
+    width: 90%;
+}

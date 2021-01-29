@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>M² | Foire Aux Questions</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Commun.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/FAQ.css">
+    <link rel="icon" type="image/png" href="../images/Inverted_Pentagram-ico.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="menuBurger">
+                <img src="../images/burger.png" alt="burger" id="imgBurger">
+                <div id="menu2">
+                    <br><p></p>
+                    <a href="./index.html">Accueil</a>
+                    <a href="./Produit.html">Produit</a>
+                    <a>L'équipe : </a>
+                    <a href="./Equipe.html">• Notre équipe</a>
+                    <a href="./Rejoindre.html">• Nous rejoindre : </a>
+                    <a href="./Metier1.html" class="metier">• Spécialiste en résurrection</a>
+                    <a href="./Metier2.html" class="metier">• Spécialiste des ombres chinoises</a>
+                    <a href="./Metier3.html" class="metier">• Spécialiste des potions</a>
+                    <a>A propos : </a>
+                    <a href="./Contact.html">• Contact</a>
+                    <a href="./Presse.html">• Presse</a>
+                    <a href="./FAQ.html" >• FAQ</a>
+                    <br><p></p>
+                </div>
+            </div>
+            <div id="menuNormal">
+                <span>
+                    <a href="./index.html">Accueil</a>
+                </span>
+                <span>
+                    <a href="./Produit.html">Produit</a>
+                </span>
+                <span>
+                    <a>Equipe</a>
+                    <span class="submenu">
+                        <a href="./Equipe.html">Notre équipe</a>
+                        <span>
+                            <a href="./Rejoindre.html">Nous rejoindre</a>
+                            <span class="submenu">
+                                <a href="./Metier1.html" >Spécialiste en résurrection</a>
+                                <a href="./Metier2.html" >Spécialiste des ombres chinoises</a>
+                                <a href="./Metier3.html">Spécialiste des potions</a>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                <span>
+                    <a>A propos</a>
+                    <span class="submenu">
+                        <a href="./Contact.html">Contact</a>
+                        <a href="./Presse.html">Presse</a>
+                        <a href="./FAQ.html" >FAQ</a>
+                    </span>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <div> <!-- bougies fond -->
+        <img id="candleRight" src="../images/candle2.gif" alt="bougie fond">
+        <img id="candleLeft" src="../images/candle.gif" alt="bougie fond">
+    </div>
+
+    <main>
+        <div class ="boite">
+            <h1>Foire Aux Questions</h1>
+        </div>
+
+        <div class="boite">
+            <h2><label for="clickQuestion">Les questions les plus posées...</label> </h2>
+            <input type="checkbox" id="clickQuestion">
+            <div class="boite" id="depliant1">
+                <a href="#nous"> <h3> Qui sommes-nous ? </h3></a>
+                <br>
+                <a href="#service"> <h3> Quels types de services sont disponibles à la vente ? </h3> </a>
+                <br>
+                <a href="#paiment"> <h3> Quels sont les moyens de paiments acceptés ? </h3> </a>
+                <br>
+                <a href="#Claire"> <h3> Claire est-elle célibataire? </h3> </a>
+            </div>
+        </div>
+
+        <div class="boite">
+            <h2><label for="clickReponse">...et leurs réponses</label> </h2>
+            <input type="checkbox" id="clickReponse">
+            <div class="boite" id="depliant2">
+                <span id="nous"> <br> </span> <!-- l'ancre est mise dans un span avec un retour chariot pour que le header ne cache pas la question quand on clique sur le lien -->
+                <h3>Qui sommes-nous ?</h3>
+                <p>Miracle Merchant(M²) est une SARL proposant une large sélection de miracles. Nous sommes une petite entreprise familiale implantée dans le monde entier depuis 3500 avant J.-C. , et chacune de nos actions a fait grand bruit dans l'histoire.<br>
+                    Notre gage de qualité : nous ne prenons qu'une seule demande à la fois et faisons tout notre possible pour la mener à bien.</p>
+
+                <br>
+                <br>
+
+                <span id="service"> <br> </span> <!-- ancre mise dans un span pour la même raison qu'évoqué si dessus -->
+                <h3> Quels types de services sont disponibles à la vente ?</h3>
+                <p>M² propose à la vente différents types de miracles, chacun ayant un effet plus ou moins important sur le monde.
+                    Nous proposons à la vente des miracles :</p>
+                    <ul>
+                        <li>Premier prix, ils ont un faible effet, mais vous coûteront peu.</li>
+                        <li>Moyenne gamme, aux effets plus importants, mais à un niveau relativement local.</li>
+                        <li>Gamme premium, vous donnant la capacité de réaliser tous vos rêves les plus fous.</li>
+                    </ul>
+
+                <br>
+                <br>
+
+                <span id="paiment"> <br> </span> <!-- ancre mise dans un span pour la même raison qu'évoqué si dessus -->
+                <h3>Quels sont les moyens de paiements acceptés ?</h3>
+                <p>Proposant des services... peu communs, nous n'acceptons que des paiements... peu communs. <br>
+                    Ainsi, nous acceptons toute sorte de sacrifice (sauf les chèvres, ayant été trop utilisées, elles ne sont plus acceptées car leur valeur a énormément baissée).
+                    Par ailleurs, la quantité ainsi que la qualité du sacrifice sera proportionnel au type de miracle que vous souhaitez.<br>
+                    De plus, nous acceptons aussi votre âme, ou celle d'une personne suffisament proche de vous. </p>
+
+                <br>
+                <br>
+
+                <span id="Claire"> <br> </span> <!-- ancre mise dans un span pour la même raison qu'évoqué si dessus -->
+                <h3>Claire est-elle célibataire ?</h3>
+                <p>Actuellement, notre collaboratrice Claire n'est pas célibataire. <br>
+                    Par ailleurs, pour une modique somme, l'existence de son compagnon peut... être annihilée.</p>
+
+                <br>
+
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,228 @@
+html{
+	background-color: #4A235A;
+	font-family: "IA";
+}
+
+body{
+	margin: 2% 5% 2% 5%;
+}
+
+h1 {
+	color: black;
+}
+
+
+button{
+	background-color: black;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 30px;
+	bottom: 30px;
+	font-family: "Agency FB", "Arial";
+	font-size: 35;
+}
+
+aside{
+	background-color: black;
+	opacity: 75%;
+	color: white;
+	border-radius: 10px;
+	flex: 1;
+}
+
+#white *{
+	color: white;
+}
+
+#visible *{
+	font-size: 35px;
+	font-style: bold;
+}
+
+#OetW *{
+	color: white;
+	font-size: 35px;
+	font-style: bold;
+}
+
+article{
+	margin-right: 10px;
+	flex: 3;
+	background-color: black;
+	opacity: 75%;
+	color: white;
+	border-radius: 10px;
+}
+
+.studentbot{
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+}
+
+/*GESTION DU HEADER*/
+header{
+	background-color: white;
+	color: black;
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
+
+}
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header div{
+	margin: auto;
+}
+
+header a:link, header a:visited,header a:hover{
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+}
+
+main * {
+	color: white;
+}
+
+header div:hover, header div:hover a{
+	color: orange;
+	background-color: black;
+}
+
+div{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+/*GESTION DU FOOTER*/
+footer{
+	background-color: white;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	color: black;
+}
+
+footer a{
+	text-decoration: none;
+	color: black;
+	position : inherit;
+	right: 10px;
+}
+
+.burger{  /*menu smartphone*/
+	visibility:hidden;
+	position:absolute;
+}
+
+@media(max-width:480px){ /*responsive pour téléphone*/
+	body{
+		width:100%;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+	article {
+		margin-bottom: 10px;
+	}
+	.burger{
+		visibility:visible;
+	}
+	header>div>div{
+		display:flex;
+		flex-direction:row;
+		justify-content: space-between;
+		position: absolute;
+		flex-shrink:1;
+		margin-left:-700px;
+		transition: margin 400ms ease-in-out;
+	}
+	header>div>div>div{
+		margin:3px;
+	}
+	div:hover> #menu2{
+		margin-left: 0px;
+	}
+	.menupc{
+		visibility:hidden;
+	}
+	header a:link, header a:visited,header a:hover{
+		visibility: hidden;
+	}
+}
+
+.IA{
+	font-family: "IA";
+	font-size: 35;
+}
+
+@font-face {
+	font-family: "IA";
+	src: url("IA.ttf");
+}
+
+#video{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+}
+
+
+#saisie{
+	color:black;
+}
+
+.réponsebi1{
+	color: green;
+}
+
+.réponsemal{
+	color: red;
+}
+
+#jctriste{
+	width: 25%;
+}
+
+#biensur{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#bttc{
+	position: fixed;
+	top: 95%;
+	bottom: 95%;
+}
+
+#ll{
+	position: fixed;
+	top: 95%;
+	bottom: 50%;
+}

@@ -1,0 +1,47 @@
+h2 {
+	position: relative;
+	color: yellow;
+	left:100px;
+	border:1px solid #CCCCCC;
+	width: 70%;
+}
+body {
+	background-color: #838892;
+	border-style: dotted;
+	border-color:black;
+
+}
+img {
+	position:relative;
+	left:10px;
+}
+a {
+	position:absolute;
+}
+.point {
+	position:relative;
+	bottom:15px;
+}
+.point1 {
+	position:relative;
+	left:280px;
+}
+.etudiant {
+	width:5%;
+	z-index: 1;
+	margin-right: 100px;
+}
+.batiment {
+	width:10%;
+	height:10%;
+	left:250px;
+	top:30px;
+}
+.mainpuzzle {
+	position:absolute;
+	margin-left: 45%;
+	bottom: 0%;
+	width: 22%;
+}
+
+

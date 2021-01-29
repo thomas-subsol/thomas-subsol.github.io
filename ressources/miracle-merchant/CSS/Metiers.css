@@ -1,0 +1,20 @@
+main img {
+	height: 30%;
+	width: 30%;
+	float: left;
+}
+
+.indent {
+	position: relative;
+	left: 3%;
+	width: 95%;
+}
+
+p > a {
+	color:#fa7848;
+	text-decoration:underline;
+}
+
+p > a:hover, li a:hover {
+	color:#db501d;
+}

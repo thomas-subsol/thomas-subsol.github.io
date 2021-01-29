@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Cabin Sketch');
+
+html{
+	font-family: "Montserrat", "Arial";
+	font-size: 1.2em;
+	background-color: black;
+}
+
+/*@font-face {
+	font-family: "Montserrat";
+	src: url("../CSS/Polices/Montserrat.ttf");
+}
+
+@font-face {
+	font-family: "Cabin Sketch";
+	src: url("../CSS/Polices/Cabin-Sketch.ttf");
+}
+*/
+
+body{
+	height: 100%;
+	margin: 0% 10%;
+	/*Background pentagram*/
+	background-image: url(../images/Inverted_Pentagram.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: 35%;
+}
+
+h1{
+	font-family: "Cabin Sketch";
+	font-size: 7.5vw;
+	text-align: center;
+	background-image: url(../images/feu.gif);
+	color : transparent;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+}
+
+p{
+	text-align: justify;
+}
+
+
+a{
+	text-decoration: none;
+	color: white;
+	width: 100%;
+}
+
+.boite{
+	color: white;
+	margin-top: 5%;
+	margin-bottom: 1%;
+	padding: 1%;
+	background-color: #424242;
+	opacity: 0.97;
+	border-radius: 1.5em;
+	box-shadow: 5px 5px 25px black;
+}
+
+.ligneFlex{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.presentation{
+    display: flex;
+	flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border: 3px solid transparent;
+    border-radius: 1em;
+    margin: 1%;
+    transition: all 0.2s;
+}
+
+.presentation:hover{
+    border: 3px solid #202020;
+    background-color: #252525;
+    transition: all 0.2s;
+}
+
+.presentation:hover .image{
+    border-radius: 1.5em;
+}
+
+.presentation p, .presentation a{
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+}
+
+.image{
+    display: block;
+    margin-top: 2%;
+    width: 97%;
+    border: 3px solid #424242;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+#candleRight{
+	position:fixed; bottom:-6%;
+	height: 40%;
+	right:-3.5%;
+}
+
+#candleLeft{
+	position:fixed; bottom:-6%;
+	height: 40%;
+	left:-3.5%;
+}
+
+@keyframes Fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*GESTION DES TABLEAUX*/
+table{
+	border: medium solid white;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,tr,th{
+	border: medium solid white;
+	text-align: center;
+	width: 25%;
+	padding: 5px;
+}
+
+/*GESTION DU HEADER*/
+header{
+	display: flex;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
+	font-family: "Cabin Sketch";
+	font-size: 2em;
+}
+
+nav, nav > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+nav a:link, nav a:visited{
+	text-decoration: none;
+	color: red;
+}
+
+#menuNormal span{
+	width: 100%;
+	height: 100%;
+}
+
+nav a, nav span:not(.submenu) {
+	width: 100%;
+	background-color: black;
+	color: red;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 5px #202020;
+	position: relative;
+	text-align: center;
+}
+
+nav a:hover, #menuBurger a:hover{
+	box-shadow: inset 0px 0px 10px red;
+	color: white;
+}
+
+.submenu{
+	width: 100%;
+	margin: auto;
+	flex-direction: column;
+	position: absolute;
+	top: 38px;
+	display: none;
+}
+
+span:hover > .submenu{
+	display: block;
+}
+
+.submenu .submenu{
+	top:0%;
+	left:100%;
+}
+
+.submenu a{
+	top: 5px;
+	box-shadow: 0px 2px #202020;
+}
+
+
+/*MENU BURGER*/
+#menuBurger{
+	align-items: flex-start;
+	justify-content: flex-end;
+	display: none;
+}
+
+#menu2{
+	left: 0px;
+	flex-direction: column;
+	display: none;
+	align-items: center;
+	height: 100%;
+	background-color: black;
+	width: 100%;
+}
+
+#menuBurger a{
+	font-size: 4.5vh;
+	justify-content: left;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0px 2px black;
+	width: 100%;
+}
+
+#imgBurger:hover ~ #menu2, #menu2:hover{
+	display: flex;
+}
+
+#imgBurger{
+	width: 50px;
+}
+
+.metier{
+	margin-left: 20px;
+}
+
+/*RESPONSIVNESS DES MENUS*/
+
+@media (max-width: 640px){
+	#menuNormal{
+		display: none;
+	}
+	#menuBurger{
+		display: flex;
+	}
+
+	header{
+		width: 50px;
+		height: 50px;
+		right: 0px;
+		left: auto;
+	}
+
+	header:hover{
+		height: 100%;
+		width:auto;
+		max-width: 80%;
+	}
+
+	header:hover #imgBurger{
+		display: none;
+	}
+
+	nav, #menuBurger{
+		height: 100%;
+		width: 100%;
+		left: 0px;
+	}
+}
+
+/*RESPONSIVNESS GLOBALE*/
+@media (max-width: 640px){
+	.boite > table *{
+		font-size: 2vw;
+	}
+	h1{
+		margin: 0;
+	}
+
+}
+
+/*RESPONSIVNESS DES IMAGES*/
+@media (max-width: 640px){
+	.ligneFlex{flex-direction: column;}
+}
