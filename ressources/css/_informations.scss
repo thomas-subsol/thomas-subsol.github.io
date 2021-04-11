@@ -1,0 +1,15 @@
+/*CSS INFORMATIONS*/
+.informations {
+  flex-direction: column;
+  color: $rouge;
+
+  img {
+    height: 250px;
+    border: 2px solid $rouge;
+  }
+
+  a {
+    color: $rouge;
+    text-decoration: underline;
+  }
+}

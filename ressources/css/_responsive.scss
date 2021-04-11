@@ -1,0 +1,211 @@
+/*CSS RESPONSIVE*/
+@media screen and (max-width: 1370px) {
+
+  .presentation {
+    h1 {
+      padding: 0;
+    }
+
+    .image {
+      width: 350px;
+    }
+  }
+
+  .contact {
+    button {
+      width: 35%;
+    }
+
+    .saisie {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+
+  header {
+    position: static;
+  }
+
+  main {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo-menu-reactif {
+    display: block;
+
+    float: none;
+
+    margin: auto;
+    padding: 3px;
+  }
+
+  .liens-menu-reactif {
+    width: $largeur-menu-reactif;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: -1 * $largeur-menu-reactif;
+
+    background-color: $rouge;
+    transition: .25s;
+
+    & a {
+      width: 90%;
+
+      border-top: solid 1px $noir;
+
+      line-height: 48px;
+    }
+  }
+
+  .ouverture-liens-menu-reactif {
+    margin-left: 0;
+    box-shadow: 2px 0 6px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  .icone-menu-reactif {
+    height: 40px;
+
+    position: fixed;
+    float: left;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 5px 0;
+    padding: 8px;
+
+    cursor: pointer;
+  }
+
+  .barre-burger {
+    width: 50px;
+    height: 7px;
+
+    border-radius: 3px;
+
+    background-color: black;
+    transition: .5s;
+  }
+
+  .ouverture-icone-menu-reactif {
+    #haut {
+      transform: rotate(45deg) translate(12px, 11px);
+      transition: .5s;
+    }
+
+    #milieu {
+      opacity: 0;
+      transition: .1s ease-in;
+    }
+
+    #bas {
+      transform: rotate(-45deg) translate(12px, -11px);
+      transition: .5s;
+    }
+  }
+
+  .camouflage-menu-reactif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .presentation {
+    flex-direction: column;
+
+    p {
+      padding-right: 8px;
+    }
+  }
+
+  .competences {
+    flex-direction: column;
+
+    h1 {
+      width: auto;
+    }
+
+    .competence {
+      width: 100%;
+      border-right: none;
+      border-top: none;
+    }
+  }
+
+  .projets {
+    .projet {
+      flex-direction: column;
+
+      .image {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        > img {
+          width: 150px;
+          margin: 8px;
+        }
+      }
+
+      .texte {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .contact {
+    label {
+      display: none;
+    }
+
+    input, textarea {
+      width: 100%;
+
+      &::placeholder {
+        color: lighten($noir, 50%);
+      }
+    }
+
+    button {
+      width: 50%;
+    }
+
+    .saisie {
+      width: 90%;
+    }
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    p {
+      flex: 0 50%;
+      flex-grow: 1;
+    }
+  }
+}

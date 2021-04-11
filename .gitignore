@@ -1,5 +1,5 @@
 .git/
 .idea/
-css/
-!css/index.min.css
+**.scss
+**.css.map
 ressources/images/images-hd/
