@@ -67,7 +67,7 @@
     }
   }
 
-  .gauche {
+  :nth-child(even) {
     flex-direction: row;
 
     img {
@@ -79,7 +79,7 @@
     }
   }
 
-  .droite {
+  :nth-child(odd) {
     flex-direction: row-reverse;
 
     img {
